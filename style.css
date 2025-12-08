@@ -145,3 +145,41 @@ figcaption {
     animation: var(--animation);
 }
 
+.footer {
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .button {
+        background: var(--color-main-light);
+        color: var(--color-main-dark);
+        border: 2px solid transparent;
+    }
+}
+
+@media (max-width: 780px) {
+    .body {
+        padding: var(--padding);
+    }
+    .header {
+        font-size: clamp(0.75rem, 0.118rem + 3.16vw, 1.5rem);
+    }
+    .button {
+        width: 100%;
+    }
+    .imgage {
+        width: 100%;
+    }
+    .advice {
+        font-size: clamp(1.5rem, 0.237rem + 6.32vw, 3rem);
+        height: clamp(1rem, 0.158rem + 4.21vw, 2rem);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .advice__cursor,
+    .button {
+        animation: none;
+        transition: none;
+    }
+}
